@@ -9,6 +9,8 @@ export class ServerComponent{
     age:number=21;
     name:string='Shoaib';
     allowServer:boolean=false;
+    serverCreationStatus:string="Server is not running";
+
 constructor(){
 setTimeout(()=>{
     this.allowServer=true;
@@ -16,6 +18,10 @@ setTimeout(()=>{
 }
      myBio() {
       return  this.name;
+    }
+
+    onCreateServer(){
+        return (this.serverCreationStatus="Server is running");
     }
 }
 
