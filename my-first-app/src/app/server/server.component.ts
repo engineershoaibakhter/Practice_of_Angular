@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { NgModel } from "@angular/forms";
 
 @Component({
     selector:"app-server",
@@ -10,6 +11,7 @@ export class ServerComponent{
     name:string='Shoaib';
     allowServer:boolean=false;
     serverCreationStatus:string="Server is not running";
+    serverName:string="Test";
 
 constructor(){
 setTimeout(()=>{
@@ -23,5 +25,8 @@ setTimeout(()=>{
     onCreateServer(){
         return (this.serverCreationStatus="Server is running");
     }
+    // onUpdateServerName(event:Event){
+    //     this.serverName=(<HTMLInputElement>event.target).value;
+    // }
 }
 
