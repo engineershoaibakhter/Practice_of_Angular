@@ -5,5 +5,12 @@ import { Component } from "@angular/core";
     templateUrl:"./server.component.html",
 })
 
-export class ServerComponent{}
+export class ServerComponent{
+    age:number=21;
+    name:string='Shoaib';
+
+     myBio() {
+      return  this.name;
+    }
+}
 
