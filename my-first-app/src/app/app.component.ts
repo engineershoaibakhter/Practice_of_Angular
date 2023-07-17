@@ -9,7 +9,8 @@ export class AppComponent {
   title = 'Shoaib';
   data:number=5;
 
-  onAlert(name:string,age:number){
-    alert(`My name is ${name} and My age is ${age}`);
+  onAlert(val:any){
+    // alert(`My name is ${name} and My age is ${age}`);
+    console.log(val)
   }
 }
