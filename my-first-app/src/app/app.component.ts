@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Shoaib';
   data:number=5;
+
+  onAlert(name:string,age:number){
+    alert(`My name is ${name} and My age is ${age}`);
+  }
 }
