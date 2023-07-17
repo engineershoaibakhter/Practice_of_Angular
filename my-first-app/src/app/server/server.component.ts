@@ -8,7 +8,12 @@ import { Component } from "@angular/core";
 export class ServerComponent{
     age:number=21;
     name:string='Shoaib';
-
+    allowServer:boolean=false;
+constructor(){
+setTimeout(()=>{
+    this.allowServer=true;
+},2000)
+}
      myBio() {
       return  this.name;
     }
