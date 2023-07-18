@@ -3,12 +3,19 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styles:[`h1{background-color:red}`] 
+  styleUrls:['./app.component.css']
 })
 export class AppComponent {
   title:string = 'Getting Input Value';
   displayValue:string="";
   count:number=0;
+
+  show:boolean=false;
+
+  name:string="Shoaib"
+
+
+  
 
   // getValue(val:string){
   //   this.displayValue= val;

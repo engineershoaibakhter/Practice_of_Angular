@@ -18,15 +18,15 @@
 
 <!-- 1. When you enter any number and then leave button then this event is called -->
 <!-- <input type="text" #box (keyup)="onAlert(box.value)" placeholder="Keyup Event"> -->
-<br>
+<!-- <br> -->
 
 <!-- 2.  When you enter any number and then show output-->
 <!-- <input type="text" #box1 (keydown)="onAlert(box1.value)" placeholder="keydown Event"> -->
-<br><br>
+<!-- <br><br> -->
 
 <!-- 3.  When your focus would be finished then it will show the output-->
 <!-- <input type="text" #box2 (blur)="onAlert(box2.value)" placeholder="blur Event"> -->
-<br><br>
+<!-- <br><br> -->
 
 <!-- 4. When you enter any character then it will show on output immediately-->
 <!-- <input type="text" #box3 (input)="onAlert(box3.value)" placeholder="input Event"> -->
@@ -52,9 +52,51 @@
 
 
 
-<h1>{{title}}</h1>
-<button (click)="counter('sub')">--</button>
+<h1 class="heading">{{title}}</h1>
+
+
+<!-- <button (click)="counter('sub')">--</button>
 <h1>{{count}}</h1>
-<button (click)="counter('add')">++</button>
+<button (click)="counter('add')">++</button> -->
+
+<!-- <input type="text" value={{valueofInput}} disabled={{valueofDisable}}>
+<br><br>
+<input type="text" #inp [value]="valueofInput" [disabled]="valueofDisable">
+<button (click)="changeValueOfBoolean()">Click</button> -->
+
+
+<!-- First Way -->
+
+<h1 *ngIf="show else elseBlock">Shoaib Akhter</h1>
+
+<ng-template #elseBlock>
+<h1>Shoaib Qadri</h1>
+</ng-template>
+
+<!-- Second Way  -->
+
+<h1 *ngIf="show; then ifBlock else elseBlock"></h1>
+
+<ng-template #ifBlock>
+    <h1>Shoaib Akhter</h1>
+</ng-template>
+
+<ng-template #elseBlock>
+    <h1>Shoaib Qadri</h1>
+</ng-template>
+
+<!-- Third Way  -->
+
+<h1 *ngIf="name==='Shoaib'; then ifBlock else elseBlock"></h1>
+
+<ng-template #ifBlock>
+    <h1>Shoaib Akhter</h1>
+</ng-template>
+
+<ng-template #elseBlock>
+    <h1>Shoaib Qadri</h1>
+</ng-template>
+
+
 
 
