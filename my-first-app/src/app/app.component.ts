@@ -6,29 +6,12 @@ import { Component } from '@angular/core';
   styleUrls:['./app.component.css']
 })
 export class AppComponent {
-  title:string = 'Getting Input Value';
-  displayValue:string="";
-  count:number=0;
-
-  show:boolean=false;
-
-  name:string="Shoaib"
-
-  color:string="redd";
-
   
-
-  // getValue(val:string){
-  //   this.displayValue= val;
-  // }
-
-  // onAlert(val:any){
-  //   // alert(`My name is ${name} and My age is ${age}`);
-  //   console.log(val)
-  // }
-
-   counter(value:string){
-    value==="add"? this.count++ : this.count--;
-   }
+  users=['Shoaib','Akhter','Qadri'];
+  userDetails=[
+    {id:1,name:"Shoaib",email:"Shoaib@gmail.com"},
+    {id:2,name:"Akhter",email:"Akhter@gmail.com"},
+    {id:3,name:"Qadri",email:"Qadri@gmail.com"},
+  ]
 
 }
