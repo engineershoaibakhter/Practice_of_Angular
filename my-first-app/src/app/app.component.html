@@ -65,7 +65,7 @@
 <button (click)="changeValueOfBoolean()">Click</button> -->
 
 
-<!-- First Way -->
+First Way
 
 <h1 *ngIf="show else elseBlock">Shoaib Akhter</h1>
 
@@ -98,5 +98,15 @@
 </ng-template>
 
 
+<!-- <ng-template [ngIf]="color=='red'"><h1 style="color: red;">Shoaib</h1></ng-template>
+<ng-template [ngIf]="color=='green'"><h1 style="color: green;">Shoaib</h1></ng-template>
+<ng-template [ngIf]="color=='blue'"><h1 style="color: blue;">Shoaib</h1></ng-template> -->
 
+
+<div [ngSwitch]="color">
+    <h1 *ngSwitchCase="'red'" style="color: red;">Red Color</h1>
+    <h1 *ngSwitchCase="'green'" style="green: red;">Green Color</h1>
+    <h1 *ngSwitchCase="'blue'" style="blue: red;">Blue Color</h1>
+    <h1 *ngSwitchDefault style="color:black;">black Color</h1>
+</div>
 

@@ -14,6 +14,7 @@ export class AppComponent {
 
   name:string="Shoaib"
 
+  color:string="redd";
 
   
 
