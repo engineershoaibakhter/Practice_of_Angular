@@ -6,11 +6,21 @@ import { Component } from '@angular/core';
   styles:[`h1{background-color:red}`] 
 })
 export class AppComponent {
-  title = 'Shoaib';
-  data:number=5;
+  title:string = 'Getting Input Value';
+  displayValue:string="";
+  count:number=0;
 
-  onAlert(val:any){
-    // alert(`My name is ${name} and My age is ${age}`);
-    console.log(val)
-  }
+  // getValue(val:string){
+  //   this.displayValue= val;
+  // }
+
+  // onAlert(val:any){
+  //   // alert(`My name is ${name} and My age is ${age}`);
+  //   console.log(val)
+  // }
+
+   counter(value:string){
+    value==="add"? this.count++ : this.count--;
+   }
+
 }

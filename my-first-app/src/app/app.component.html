@@ -13,26 +13,48 @@
 </div> -->
 
 
-<h1>{{title}} and {{data+6}} and {{title==="4"}}</h1>
+<!-- <h1>{{title}} and {{data+6}} and {{title==="4"}}</h1> -->
 <!-- <button (click)="onAlert('Shoaib',5)">Click</button> -->
 
 <!-- 1. When you enter any number and then leave button then this event is called -->
-<input type="text" #box (keyup)="onAlert(box.value)" placeholder="Keyup Event">
+<!-- <input type="text" #box (keyup)="onAlert(box.value)" placeholder="Keyup Event"> -->
 <br>
 
 <!-- 2.  When you enter any number and then show output-->
-<input type="text" #box1 (keydown)="onAlert(box1.value)" placeholder="keydown Event">
+<!-- <input type="text" #box1 (keydown)="onAlert(box1.value)" placeholder="keydown Event"> -->
 <br><br>
 
 <!-- 3.  When your focus would be finished then it will show the output-->
-<input type="text" #box2 (blur)="onAlert(box2.value)" placeholder="blur Event">
+<!-- <input type="text" #box2 (blur)="onAlert(box2.value)" placeholder="blur Event"> -->
 <br><br>
 
 <!-- 4. When you enter any character then it will show on output immediately-->
-<input type="text" #box3 (input)="onAlert(box3.value)" placeholder="input Event">
+<!-- <input type="text" #box3 (input)="onAlert(box3.value)" placeholder="input Event"> -->
 
 <!-- 5. When you keep your cursor on element then the output will be show-->
-<h1 (mouseover)="onAlert('over')">MouseOver</h1>
+<!-- <h1 (mouseover)="onAlert('over')">MouseOver</h1> -->
 
 <!-- 6. When you leave your cursor from element then the output will be show -->
-<h1 (mouseleave)="onAlert('leave')">MouseLeave</h1>
+<!-- <h1 (mouseleave)="onAlert('leave')">MouseLeave</h1> -->
+
+
+
+
+<!-- <input type="text" #first1 name="name" placeholder="Enter Name">
+<button class="btn btn-primary" (click)="getValue(first1.value)">Click</button>
+<button class="btn btn-primary" (click)="getValue(first1.name)">Click</button>
+<button class="btn btn-primary" (click)="getValue(first1.placeholder)">Click</button>
+
+
+<br>
+<p>The value is : {{displayValue}}</p> -->
+
+
+
+
+<h1>{{title}}</h1>
+<button (click)="counter('sub')">--</button>
+<h1>{{count}}</h1>
+<button (click)="counter('add')">++</button>
+
+
