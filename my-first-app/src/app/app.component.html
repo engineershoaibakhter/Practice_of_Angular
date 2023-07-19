@@ -1,2 +1,4 @@
-<h1 *ngFor="let item of users">{{item}}</h1>
-<h2 *ngFor="let item of userDetails">{{item.name}} and {{item.email}}</h2>
+<h1>{{toggleTitle}}</h1>
+<button (click)="toggleFun()" class="btn btn-primary">{{toggleBtnText}}</button>
+
+<p *ngIf="display">Element</p>

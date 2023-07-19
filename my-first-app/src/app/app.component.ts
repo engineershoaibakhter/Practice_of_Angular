@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-root',
@@ -7,11 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  users=['Shoaib','Akhter','Qadri'];
-  userDetails=[
-    {id:1,name:"Shoaib",email:"Shoaib@gmail.com"},
-    {id:2,name:"Akhter",email:"Akhter@gmail.com"},
-    {id:3,name:"Qadri",email:"Qadri@gmail.com"},
-  ]
+  toggleTitle:string='Toggle Element';
+  toggleBtnText:string='Click';
+  display:boolean=false;
 
+  toggleFun(){
+this.display=!this.display;
+  }
 }

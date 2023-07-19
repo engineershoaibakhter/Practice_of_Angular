@@ -25,8 +25,8 @@ setTimeout(()=>{
     onCreateServer(){
         return (this.serverCreationStatus="Server is running");
     }
-    // onUpdateServerName(event:Event){
-    //     this.serverName=(<HTMLInputElement>event.target).value;
-    // }
+    onUpdateServerName(event:Event){
+        this.serverName=(<HTMLInputElement>event.target).value;
+    }
 }
 
