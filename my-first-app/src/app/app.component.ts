@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
-
 
 @Component({
   selector: 'app-root',
@@ -8,9 +6,30 @@ import { NgForm } from '@angular/forms';
   styleUrls:['./app.component.css']
 })
 export class AppComponent {
-name:string='';
-// or 
-// name:any;
 
- 
+  // Simple Type
+  data:number=20;
+  getData(item:number | boolean){
+    if(typeof item==="number"){
+      return item*this.data;
+    }
+  } 
+
+  // Object
+  dataObj:{name:string,phone:number}={name:"shoaib",phone:213};
+  getDataObj(item:{name:string,phone:number}){
+    if(typeof item==="number"){
+      return item*this.data;
+    }
+  } 
+
+
+  // Array
+  dataArray:string[]=['1','2'];
+  getDataArray(item:number[]){
+    if(typeof item==="number"){
+      return item*this.data;
+    }
+  } 
+
 }
