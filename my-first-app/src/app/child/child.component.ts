@@ -1,4 +1,4 @@
-import { Component,Input } from '@angular/core';
+import { Component,EventEmitter,Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -6,5 +6,6 @@ import { Component,Input } from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent {
-@ Input() item=0;
+@Output() updateDataEvent=new EventEmitter<string>();
+
 }

@@ -1,1 +1,2 @@
-<p>{{item}}</p>
+<input type="text" #text>
+<button (click)="updateDataEvent.emit(text.value)" >Click</button>

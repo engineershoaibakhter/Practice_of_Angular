@@ -8,11 +8,10 @@ import { NgForm } from '@angular/forms';
   styleUrls:['./app.component.css']
 })
 export class AppComponent {
-data:any=10;
-random(){
-  this.data=Math.floor(Math.random()*10);
-}
-  
+data:string="shoaib";
 
-  
+updateData(item:string){
+  this.data=item;
+}
+ 
 }

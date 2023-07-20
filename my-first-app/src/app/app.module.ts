@@ -8,6 +8,7 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ChildComponent } from './child/child.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ChildComponent } from './child/child.component';
     ServersComponent,
     NavbarComponent,
     ChildComponent,
+    UserDetailsComponent,
   ],
   imports: [
     BrowserModule,
