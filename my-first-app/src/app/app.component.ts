@@ -11,4 +11,6 @@ export class AppComponent {
   
   todayDay:string=Date();
 
+  title:string='Advanced Angular';
+  titleObj:{}={name:"Shoaib",age:54}
 }
