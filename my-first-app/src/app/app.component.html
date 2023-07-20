@@ -1,4 +1,9 @@
-<h1>{{toggleTitle}}</h1>
-<button (click)="toggleFun()" class="btn btn-primary">{{toggleBtnText}}</button>
-
-<p *ngIf="display">Element</p>
+<h1>{{title}}</h1>
+<input type="text" placeholder="Enter any Text" #text>
+<button (click)="addTask(text.value)">Add</button>
+<div>
+    <ul *ngFor="let item of list">
+        <li>{{item.name}}</li>
+        <button (click)="deleteItem(item.id)">Delete</button>
+    </ul>
+</div>

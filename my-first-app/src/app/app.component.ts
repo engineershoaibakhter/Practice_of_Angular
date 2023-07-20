@@ -8,12 +8,17 @@ import { NgForm } from '@angular/forms';
   styleUrls:['./app.component.css']
 })
 export class AppComponent {
-  
-  toggleTitle:string='Toggle Element';
-  toggleBtnText:string='Click';
-  display:boolean=false;
-
-  toggleFun(){
-this.display=!this.display;
+  title:string="Todo List";
+  list:any[]=[]
+  addTask(item:any){
+    console.log(item)
+   this.list.push({id:this.list.length,name:item})
+   console.log(this.list)
   }
+  deleteItem(id:Number){
+   this.list= this.list.filter(item=>item.id!==id)
+  }
+  
+
+  
 }
