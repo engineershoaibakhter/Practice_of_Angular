@@ -8,10 +8,9 @@ import { NgForm } from '@angular/forms';
   styleUrls:['./app.component.css']
 })
 export class AppComponent {
-data:string="shoaib";
+name:string='';
+// or 
+// name:any;
 
-updateData(item:string){
-  this.data=item;
-}
  
 }
