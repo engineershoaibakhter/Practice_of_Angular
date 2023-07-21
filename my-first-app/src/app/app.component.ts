@@ -7,10 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
  
-  data:string="Shoaib Akhter";
-  
-  todayDay:string=Date();
-
-  title:string='Advanced Angular';
-  titleObj:{}={name:"Shoaib",age:54}
+  data:number=20;
 }

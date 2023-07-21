@@ -9,6 +9,7 @@ import { ServersComponent } from './servers/servers.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ChildComponent } from './child/child.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { PkrDollarPipe } from './pipes/pkr-dollar.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     NavbarComponent,
     ChildComponent,
     UserDetailsComponent,
+    PkrDollarPipe,
   ],
   imports: [
     BrowserModule,
