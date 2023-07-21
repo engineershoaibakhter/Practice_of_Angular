@@ -1,12 +1,6 @@
-<!-- <form #loginForm="ngForm" (ngSubmit)="userLogin(loginForm.value)"> -->
-<form #loginForm="ngForm" (ngSubmit)="userLogin(loginForm.controls)">
-
-    <input type="text" name="name" placeholder="Enter Name" ngModel value="Shoaib">
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+    <input type="text" placeholder="Enter Name" name="user" formControlName="user">
     <br><br>
-    <input type="password" name="password" placeholder="Enter Password" ngModel>
-    <button>Submit</button>
+    <input type="password" placeholder="Enter Password" name="password" formControlName="password">
+<button>Submit</button>
 </form>
-
-<button (click)="userLogin(loginForm.value)">Submit Outside</button>
-
-
