@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ChildComponent } from './child/child.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { PkrDollarPipe } from './pipes/pkr-dollar.pipe';
+import { RedEleDirective } from './red-ele.directive';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { PkrDollarPipe } from './pipes/pkr-dollar.pipe';
     ChildComponent,
     UserDetailsComponent,
     PkrDollarPipe,
+    RedEleDirective,
   ],
   imports: [
     BrowserModule,
