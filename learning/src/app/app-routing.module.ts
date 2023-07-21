@@ -4,6 +4,7 @@ import {HomeComponent} from './home/home.component';
 import {AboutComponent} from './about/about.component';
 import {UserComponent} from './user/user.component';
 import {NopageComponent} from './nopage/nopage.component'
+import {AboutmeComponent} from './aboutme/aboutme.component'
 
 
 const routes: Routes = [
@@ -14,6 +15,9 @@ const routes: Routes = [
   {
     path:'about',
     component:AboutComponent,
+    children:[
+      {path:'me',component:AboutmeComponent}
+    ]
   },
   {
     path:'user/:id',

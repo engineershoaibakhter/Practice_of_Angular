@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { UserComponent } from './user/user.component';
 import { NopageComponent } from './nopage/nopage.component';
+import { AboutmeComponent } from './aboutme/aboutme.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NopageComponent } from './nopage/nopage.component';
     HomeComponent,
     AboutComponent,
     UserComponent,
-    NopageComponent
+    NopageComponent,
+    AboutmeComponent
   ],
   imports: [
     BrowserModule,
