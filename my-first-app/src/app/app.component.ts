@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
  
-  data:number=20;
+  userLogin(loginForm: any) {
+   
+    console.log(loginForm)
+
+   
+  }
 }

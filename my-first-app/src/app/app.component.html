@@ -1,5 +1,12 @@
-<h2>{{data | pkrDollar:100}}</h2>
+<!-- <form #loginForm="ngForm" (ngSubmit)="userLogin(loginForm.value)"> -->
+<form #loginForm="ngForm" (ngSubmit)="userLogin(loginForm.controls)">
 
+    <input type="text" name="name" placeholder="Enter Name" ngModel value="Shoaib">
+    <br><br>
+    <input type="password" name="password" placeholder="Enter Password" ngModel>
+    <button>Submit</button>
+</form>
 
+<button (click)="userLogin(loginForm.value)">Submit Outside</button>
 
 
