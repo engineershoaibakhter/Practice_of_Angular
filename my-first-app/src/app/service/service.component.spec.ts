@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NopageComponent } from './nopage.component';
+import { ServiceComponent } from './service.component';
 
-describe('NopageComponent', () => {
-  let component: NopageComponent;
-  let fixture: ComponentFixture<NopageComponent>;
+describe('ServiceComponent', () => {
+  let component: ServiceComponent;
+  let fixture: ComponentFixture<ServiceComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [NopageComponent]
+      declarations: [ServiceComponent]
     });
-    fixture = TestBed.createComponent(NopageComponent);
+    fixture = TestBed.createComponent(ServiceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

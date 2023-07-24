@@ -1,0 +1,13 @@
+[
+    {
+        "FirstName":"Shoaib",
+        "SecondName":"Akhter",
+        "age":14,
+
+        "fatherName":[{
+            "FirstName":"Akhter"
+    }]
+    
+    }
+    
+]

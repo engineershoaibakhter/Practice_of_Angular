@@ -1,7 +1,9 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 import { AppComponent } from './app.component';
@@ -12,6 +14,7 @@ import { ChildComponent } from './child/child.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { PkrDollarPipe } from './pipes/pkr-dollar.pipe';
 import { RedEleDirective } from './red-ele.directive';
+import { ServiceComponent } from './service/service.component';
 
 @NgModule({
   declarations: [
@@ -23,11 +26,13 @@ import { RedEleDirective } from './red-ele.directive';
     UserDetailsComponent,
     PkrDollarPipe,
     RedEleDirective,
+    ServiceComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
