@@ -1,7 +1,10 @@
 <p>service works!</p>
-<ul *ngFor="let data of userData">
-    <li>{{data.FirstName}}</li>
-    <li>{{data.fatherName[0].FirstName}}</li>
-    <li>{{data.fatherName[0].FirstName}}</li>
-
-</ul>
+<form #usersForm="ngForm" (ngSubmit)="getUserFormData(usersForm.value)">
+    <input type="text" ngModel placeholder="First Name">
+    <br><br>
+    <input type="text" ngModel placeholder="Second Name">
+    <br><br>
+    <input type="number" ngModel placeholder="Age">
+    <br><br>
+    <button>Submit</button>
+</form>

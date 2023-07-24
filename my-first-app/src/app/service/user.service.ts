@@ -11,4 +11,7 @@ export class UserService {
   userInfo(){
     return this.http.get('assets/user.json');
   }
+  saveUser(data:any){
+    return this.http.post('assets/user.json',data);
+  }
 }

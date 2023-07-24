@@ -16,6 +16,13 @@ export class ServiceComponent implements OnInit{
   this.userService.userInfo().subscribe((data)=>{
     this.userData=data;
   })
-  
+
  }
+
+ getUserFormData(data:any){
+  this.userService.saveUser(data).subscribe((result)=>{
+console.warn(result);
+  })
+  console.log(data)
+    }
 }
