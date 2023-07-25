@@ -1,0 +1,57 @@
+<div class="navbar">
+  <div class="logo">
+    <img src="./assets/The_KaDeWe.jpg" alt="Company Logo" />
+    <nav>
+      <ul>
+        <div class="subnav">
+          <button class="subnavbtn">
+            Shop<i class="fa fa-caret-down"></i>
+          </button>
+          <div class="subnav-content" *ngFor="let shopItem of homeNavbarData">
+            <ul>
+              <li>
+                <a href="#">{{ shopItem.shop.Kadewe }}</a>
+              </li>
+              <li>
+                <a href="#">{{ shopItem.shop.Alsterhaus }}</a>
+              </li>
+              <li>
+                <a href="#">{{ shopItem.shop.Oberpollinger }}</a>
+              </li>
+              <li>
+                <a href="#">{{ shopItem.shop.Carsh_Haus }}</a>
+              </li>
+              <li>
+                <a href="#">{{ shopItem.shop.Lamarr }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a href="#contact">Contact</a>
+        <div class="subnav">
+          <button class="subnavbtn">
+            Users<i class="fa fa-caret-down"></i>
+          </button>
+          <div class="subnav-content" *ngFor="let shopItem of homeNavbarData">
+            <ul>
+              <li>
+                <a href="#">{{ shopItem.users.Contact }}</a>
+              </li>
+              <li>
+                <a href="#">{{ shopItem.users.Change_Password }}</a>
+              </li>
+              <li>
+                <a href="#">{{ shopItem.users.Logout }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="icons">
+          <img src="./assets/heart-icon.png" alt="Favorites" />
+          <img src="/assets/bag-icon.png" alt="Bag" />
+        </div>
+      </ul>
+    </nav>
+  </div>
+</div>
