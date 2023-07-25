@@ -7,22 +7,20 @@ import {UserService} from './user.service'
   styleUrls: ['./service.component.css']
 })
 export class ServiceComponent implements OnInit{
-
+  formData: any = {}; 
   userData:any;
 
   constructor(private userService:UserService){}
 
-  ngOnInit():void{
-  this.userService.userInfo().subscribe((data)=>{
-    this.userData=data;
-  })
+  ngOnInit():void{}
 
- }
-
- getUserFormData(data:any){
-  this.userService.saveUser(data).subscribe((result)=>{
+ getUserFormData(){
+  this.userService.saveUser(this.formData).subscribe((result)=>{
 console.warn(result);
+  },
+  (error)=>{
+    console.log(error);
   })
-  console.log(data)
+  
     }
-}
+  }
