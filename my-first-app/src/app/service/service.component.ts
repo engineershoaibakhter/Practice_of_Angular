@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from './user.service'
+import {dataType} from './user'
+
 
 @Component({
   selector: 'app-service',
@@ -7,20 +9,22 @@ import {UserService} from './user.service'
   styleUrls: ['./service.component.css']
 })
 export class ServiceComponent implements OnInit{
-  formData: any = {}; 
-  userData:any;
+  
+  
 
   constructor(private userService:UserService){}
 
   ngOnInit():void{}
 
- getUserFormData(){
-  this.userService.saveUser(this.formData).subscribe((result)=>{
-console.warn(result);
-  },
-  (error)=>{
-    console.log(error);
-  })
+  getData(){
   
+    const data:dataType={
+    name:"Shoaib",
+    emailId:'shoaib@gmail.com',
+    age:42,
+    pakistani:true,
     }
+    return data;
+  }
+
   }
