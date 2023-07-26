@@ -1,6 +1,6 @@
-<h1 *ngIf="usersData">Users Information</h1>
-    <div *ngFor="let user of usersData">
-      <p>Name: {{ user.name }}</p>
-      <p>Email: {{ user.email }}</p>
-      <hr />
-    </div>
+<ul>
+  <li><a href="" routerLink="login">Login</a></li>
+  <a routerLink="signup">Signup</a>
+</ul>
+
+<router-outlet></router-outlet>
