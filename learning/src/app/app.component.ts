@@ -6,17 +6,9 @@ import { Subscription } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnDestroy{
-  message:string='Hello, this is a message';
-private subscription:Subscription;
+export class AppComponent {
+ 
 
-constructor(private myService:MyService){
-  this.myService.getData().subscribe((data)=>{
-    console.log(data)
-  })
-}
-  ngOnDestroy():void{
-    this.subscription.unsubscribe();
-  }
+
 
 }
