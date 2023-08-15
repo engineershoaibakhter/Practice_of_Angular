@@ -47,7 +47,16 @@ import { SingleOrderComponent } from './single-order/single-order.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { CancellationOrderComponent } from './cancellation-order/cancellation-order.component';
+import { AllOrdersComponent } from './all-orders/all-orders.component';
 
+import {FormBuilder, Validators} from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
+import {MatStepperModule} from '@angular/material/stepper';
+import {NgSwitch, NgSwitchCase, AsyncPipe} from '@angular/common';
+
+import {BreakpointObserver} from '@angular/cdk/layout';
+import {StepperOrientation} from '@angular/material/stepper';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 @NgModule({
   imports:[
@@ -66,7 +75,14 @@ import { CancellationOrderComponent } from './cancellation-order/cancellation-or
     NgFor,
     MatIconModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatStepperModule,
+    MatButtonModule,
+    NgSwitch,
+    NgSwitchCase,
+     AsyncPipe,
+
+
   ],
   exports:[
     
@@ -97,6 +113,8 @@ import { CancellationOrderComponent } from './cancellation-order/cancellation-or
     CalculationComponent,
     SingleOrderComponent,
     CancellationOrderComponent,
+    AllOrdersComponent,
+    ChangePasswordComponent,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
@@ -108,7 +126,7 @@ import { CancellationOrderComponent } from './cancellation-order/cancellation-or
   bootstrap: [AppComponent],
 })
 export class AppModule {
-  constructor(private titleService: Title, private router: Router) {
+  constructor(private titleService: Title, private router: Router,private _formBuilder: FormBuilder) {
     this.router.events
       .pipe(
         filter((event) => event instanceof NavigationEnd),
