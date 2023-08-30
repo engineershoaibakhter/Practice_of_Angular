@@ -58,6 +58,7 @@ import {BreakpointObserver} from '@angular/cdk/layout';
 import {StepperOrientation} from '@angular/material/stepper';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 @NgModule({
   imports:[
@@ -117,6 +118,7 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
     AllOrdersComponent,
     ChangePasswordComponent,
     ContactDetailsComponent,
+    ForgotPasswordComponent,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

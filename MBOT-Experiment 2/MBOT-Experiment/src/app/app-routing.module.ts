@@ -24,6 +24,7 @@ import { CancellationOrderComponent } from './cancellation-order/cancellation-or
 import { AllOrdersComponent } from './all-orders/all-orders.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 const routes: Routes = [
     {
@@ -138,6 +139,11 @@ const routes: Routes = [
         path: 'contact-details', 
         component: ContactDetailsComponent,
         data: { title: 'MBOT - Contact Details'} 
+    },
+    { 
+        path: 'forgot-password', 
+        component: ForgotPasswordComponent,
+        data: { title: 'MBOT - Forgot Password'} 
     },
     // otherwise redirect to home
     { path: '**', redirectTo: '' }

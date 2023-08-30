@@ -27,28 +27,52 @@
             </ul>
           </div>
         </div>
-        <a href="#contact" *ngIf="currentPath !== '/shopping-cart' && currentPath !== '/waiting-list' && currentPath !== '/single-order' && currentPath !== '/cancellation-order' && currentPath !== '/all-orders'">Contact</a>
-        <a routerLink="/all-orders" *ngIf="currentPath === '/shopping-cart' || currentPath === '/waiting-list' || currentPath === '/cancellation-order' || currentPath === '/all-orders'"><b>My Orders</b></a>
-        <a routerLink="/all-orders" *ngIf="currentPath === '/single-order'">My Orders</a>
+        <a
+          routerLink="/contact-details"
+          *ngIf="
+            currentPath !== '/shopping-cart' &&
+            currentPath !== '/waiting-list' &&
+            currentPath !== '/single-order' &&
+            currentPath !== '/cancellation-order' &&
+            currentPath !== '/all-orders'
+          "
+          >Contact</a
+        >
+        <a
+          routerLink="/all-orders"
+          *ngIf="
+            currentPath === '/shopping-cart' ||
+            currentPath === '/waiting-list' ||
+            currentPath === '/cancellation-order' ||
+            currentPath === '/all-orders'
+          "
+          ><b>My Orders</b></a
+        >
+        <a routerLink="/all-orders" *ngIf="currentPath === '/single-order'"
+          >My Orders</a
+        >
 
-        
         <div class="subnav">
           <button class="subnavbtn" *ngIf="currentPath === '/single-order'">
-           <b>Users</b><i class="fa fa-caret-down"></i>
+            <b>Users</b><i class="fa fa-caret-down"></i>
           </button>
           <button class="subnavbtn" *ngIf="currentPath !== '/single-order'">
             Users<i class="fa fa-caret-down"></i>
-           </button>
+          </button>
           <div class="subnav-content" *ngFor="let shopItem of homeNavbarData">
             <ul>
               <li>
-                <a href="#">{{ shopItem.users.Contact }}</a>
+                <a routerLink="/contact-details">{{
+                  shopItem.users.Contact
+                }}</a>
               </li>
               <li>
-                <a href="#">{{ shopItem.users.Change_Password }}</a>
+                <a routerLink="/change-password">{{
+                  shopItem.users.Change_Password
+                }}</a>
               </li>
               <li>
-                <a href="#" (click)="logout()">{{ shopItem.users.Logout }}</a>
+                <a href="" (click)="logout()">{{ shopItem.users.Logout }}</a>
               </li>
             </ul>
           </div>

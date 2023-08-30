@@ -1,7 +1,10 @@
-import { Component} from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-
+import { Component, OnInit} from '@angular/core';
+import { AuthenticationService } from '@app/_services';
 import CloseIcon from '@mui/icons-material/Close';
+import { User } from '@app/_models';
+import { Router,NavigationEnd } from '@angular/router';
+
+
 export interface Tile {
   color: string;
   cols: number;
@@ -10,9 +13,7 @@ export interface Tile {
 }
 interface ContactPerson {
   name: string;
-  
 }
-
 @Component({
   selector: 'app-change-password',
   templateUrl: './change-password.component.html',
@@ -26,22 +27,11 @@ export class ChangePasswordComponent {
   submitted: boolean = false;
   errorMessages: any;
   changeDetectorRef: any;
-
-  showDetailsContainer: boolean = false;
-  showDetailsContainer1: boolean = false;
-  showDetailsContainer2: boolean = false;
-
-  showContent:string="show Details ᐯ";
-  showContent1:string="show Details ᐯ";
-  showContent2:string="show Details ᐯ";
-
-  shoppingData:any;
   closeIcon:any=CloseIcon
 
   setError(field: string, errorMessage: string) {
     this.errorMessages = { ...this.errorMessages, [field]: errorMessage };
   }
-
 
   onSubmit() {
     this.submitted = true;
@@ -66,17 +56,11 @@ export class ChangePasswordComponent {
         isValid = false;
       }
     }
-  
-
     return isValid; // Return true if all validations pass
-
-
     function newFunction(this: any, requiredField: { field: string; label: string; }) {
       return this[requiredField.field];
     }
   }
-
-  
 
   tiles: Tile[] = [
     {text: 'One', cols: 1, rows: 2, color: 'lightblue'},
@@ -84,46 +68,29 @@ export class ChangePasswordComponent {
     
   ];
 
-showDetails() {
-  this.showDetailsContainer = !this.showDetailsContainer;
-  this.showContent=this.showDetailsContainer?"show Details ᐱ":"show Details ᐯ"
-}
-showDetails1() {
-  this.showDetailsContainer1 = !this.showDetailsContainer1;
-  this.showContent1=this.showDetailsContainer1?"show Details ᐱ":"show Details ᐯ"
-}
-showDetails2() {
-  this.showDetailsContainer2 = !this.showDetailsContainer2;
-  this.showContent2=this.showDetailsContainer2?"show Details ᐱ":"show Details ᐯ"
-}
-
-
   isSmallScreen = false;
+  user?:User|null; 
+  currentPath: string='';
 
-  constructor(private breakpointObserver: BreakpointObserver) {
-    this.breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall]).subscribe(result => {
-      this.isSmallScreen = result.matches;
-      this.updateTileCols();
-console.log(this.closeIcon)
-      // shoppingCartService.getShoppingData().subscribe((data)=>{
-      //  this.shoppingData=data;
-      // })
+  constructor(private authenticationService: AuthenticationService,private router: Router) {
+    this.authenticationService.user.subscribe(x => this.user = x);
+  }
+
+  ngOnInit() {
+    this.currentPath = this.router.url;
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.currentPath = event.url;
+      }
     });
   }
+
+  logout() {
+    this.authenticationService.logout();
+}
 
   updateTileCols() {
     this.tiles[1].cols = this.isSmallScreen ? 4 : 3;
     this.tiles[0].cols = this.isSmallScreen ? 4 : 1;
   }
 }
-
-
-
-
-
-
-
-
-
-
-

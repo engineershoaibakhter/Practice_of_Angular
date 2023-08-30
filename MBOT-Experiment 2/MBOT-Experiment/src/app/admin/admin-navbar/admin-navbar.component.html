@@ -53,13 +53,13 @@
             <div class="subnav-content" *ngFor="let data of getDataOfAdminNavbar">
               <ul>
                 <li>
-                  <a href="#">{{data.user.contact}}</a>
+                  <a routerLink="/contact-details">{{data.user.contact}}</a>
                 </li>
                 <li>
                   <a href="#">{{data.user.addBrand}}</a>
                 </li>
                 <li>
-                  <a href="#">{{data.user.change_Password}}</a>
+                  <a routerLink="/change-password">{{data.user.change_Password}}</a>
                 </li>
                 <li>
                     <a href="#" (click)="logout()">{{data.user.logout}}</a>

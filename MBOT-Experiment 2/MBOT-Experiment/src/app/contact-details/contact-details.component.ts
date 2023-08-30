@@ -1,7 +1,8 @@
-import { Component} from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-
+import { Component, OnInit} from '@angular/core';
+import { AuthenticationService } from '@app/_services';
 import CloseIcon from '@mui/icons-material/Close';
+import { User } from '@app/_models';
+import { Router,NavigationEnd } from '@angular/router';
 export interface Tile {
   color: string;
   cols: number;
@@ -10,9 +11,7 @@ export interface Tile {
 }
 interface ContactPerson {
   name: string;
-  
 }
-
 @Component({
   selector: 'app-contact-details',
   templateUrl: './contact-details.component.html',
@@ -90,6 +89,7 @@ export class ContactDetailsComponent {
       this.showSecondContactPerson = false;
     }
   }
+
   
   isFormValid(): boolean {
     let isValid = true;
@@ -119,10 +119,6 @@ export class ContactDetailsComponent {
       { field: 'firstContactPersonCountryName2', label: 'firstContactPersonCountryName2' },
       { field: 'firstContactPersonMobile2', label: 'firstContactPersonMobile2' },
       { field: 'firstContactPersonTelefon2', label: 'firstContactPersonTelefon2' },
-
-
-
-
 
     ];
     
@@ -154,21 +150,26 @@ export class ContactDetailsComponent {
     
   ];
 
-
-
-
   isSmallScreen = false;
+  user?:User|null; 
+  currentPath: string='';
 
-  constructor(private breakpointObserver: BreakpointObserver) {
-    this.breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall]).subscribe(result => {
-      this.isSmallScreen = result.matches;
-      this.updateTileCols();
-console.log(this.closeIcon)
-      // shoppingCartService.getShoppingData().subscribe((data)=>{
-      //  this.shoppingData=data;
-      // })
+  constructor(private authenticationService: AuthenticationService,private router: Router) {
+    this.authenticationService.user.subscribe(x => this.user = x);
+  }
+
+  ngOnInit() {
+    this.currentPath = this.router.url;
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.currentPath = event.url;
+      }
     });
   }
+
+  logout() {
+    this.authenticationService.logout();
+}
 
   updateTileCols() {
     this.tiles[1].cols = this.isSmallScreen ? 4 : 3;
