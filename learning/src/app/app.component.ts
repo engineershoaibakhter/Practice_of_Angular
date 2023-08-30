@@ -8,13 +8,12 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  display:boolean=false;
-  toggleText:string="Click";
-  toggleTitle:string="Toggle Element";
+firstName:string='Shoaib';
+secondName:string='Akhter';
 
-  toggle(){
-    this.display=!this.display;
-  }
-
+getData(firstName:string,secondName:string){
+this.firstName=firstName;
+this.secondName=secondName;
+}
 
 }

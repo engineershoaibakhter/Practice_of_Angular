@@ -1,10 +1,8 @@
 
 
-<h1>{{toggleTitle}}</h1>
-<button (click)="toggle()">{{toggleText}}</button>
-<h2 *ngIf="display">Element is toggle</h2>
+<h1>My first name is {{firstName}} and second name is {{secondName}}</h1>
 
-
+<app-child (submitData)="getData($event,$event)"></app-child>
 
 
 
