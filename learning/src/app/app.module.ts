@@ -12,12 +12,16 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { CustomerListComponent } from './customer-list/customer-list.component';
+import { DemoComponent } from './demo/demo.component';
+import { ProductComponent } from './product/product.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomerListComponent,
+    DemoComponent,
+    ProductComponent,
     
   ],
   imports: [
