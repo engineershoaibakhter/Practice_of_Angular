@@ -1,6 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { DemoComponent } from './demo/demo.component';
+import { Component, ElementRef, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +7,5 @@ import { DemoComponent } from './demo/demo.component';
 })
 export class AppComponent {
   
-  @ViewChild('paragraph') myPara:ElementRef | undefined; 
-  constructor(myPara:ElementRef){
-       console.log("this is the paragraph", this.myPara);
-  }
+ data:string="Shoaib Akhter";
 }

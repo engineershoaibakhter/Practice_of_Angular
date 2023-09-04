@@ -14,7 +14,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import { DemoComponent } from './demo/demo.component';
 import { ProductComponent } from './product/product.component';
-
+import { SetBackgroundDirective } from './directive/setBackground.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { ProductComponent } from './product/product.component';
     CustomerListComponent,
     DemoComponent,
     ProductComponent,
-    
+    SetBackgroundDirective
   ],
   imports: [
     BrowserModule,
