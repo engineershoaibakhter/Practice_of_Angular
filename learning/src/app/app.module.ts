@@ -17,6 +17,7 @@ import { ProductComponent } from './product/product.component';
 
 import { AnyNamePipe } from './pipes/any-name.pipe';
 import { HoverDirective } from './directive/hover.directive';
+import { HighlightDirective } from './directive/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HoverDirective } from './directive/hover.directive';
     DemoComponent,
     ProductComponent,
     AnyNamePipe,
-    HoverDirective
+    HoverDirective,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
