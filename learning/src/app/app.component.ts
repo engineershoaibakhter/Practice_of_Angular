@@ -7,5 +7,9 @@ import { Component, ElementRef, Renderer2 } from '@angular/core';
 })
 export class AppComponent {
   
- data:string="Shoaib Akhter";
+  userLogin(data:FormData){
+console.log(data)
+
+  }
+  bro:string="Junain"
 }
