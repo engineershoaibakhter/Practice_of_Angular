@@ -1,23 +1,26 @@
-import { Component } from '@angular/core';
-import {DataService} from './service/data.service'
+import { Component, OnInit } from '@angular/core';
+import { Observable, Observer } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  title = 'practice';
-  data:any='';
-  
-  constructor(private dataService:DataService){
-    this.dataService.getDataFromInfo().subscribe((data)=>{
-      this.data=data;
+export class AppComponent implements OnInit {
+  myObservable = new Observable((Observer) => {
+    console.log('Observer');
+    setTimeout(()=>Observer.next("1"),1000);
+    setTimeout(()=>Observer.next("2"),5000);
 
-    })
-  }
+    Observer.next('1');
+    Observer.next('2');
+    Observer.next('3');
+  });
 
-  print(){
-    alert(this.data[0].firstName);
+  ngOnInit() {
+    //  this.myObservable.subscribe(next,error,complete)
+    this.myObservable.subscribe((data) => {
+      console.log(data);
+    });
   }
 }
