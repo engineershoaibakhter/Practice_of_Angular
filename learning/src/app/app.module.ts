@@ -11,23 +11,17 @@ import {NgIf} from '@angular/common';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { CustomerListComponent } from './customer-list/customer-list.component';
-import { DemoComponent } from './demo/demo.component';
-import { ProductComponent } from './product/product.component';
 
-import { AnyNamePipe } from './pipes/any-name.pipe';
-import { HoverDirective } from './directive/hover.directive';
-import { HighlightDirective } from './directive/highlight.directive';
+
+
+import { JavascriptComponent } from './javascript/javascript.component';
+import { AngularComponent } from './angular/angular.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomerListComponent,
-    DemoComponent,
-    ProductComponent,
-    AnyNamePipe,
-    HoverDirective,
-    HighlightDirective
+    JavascriptComponent,
+    AngularComponent
   ],
   imports: [
     BrowserModule,
