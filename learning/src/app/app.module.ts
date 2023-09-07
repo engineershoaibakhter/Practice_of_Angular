@@ -16,12 +16,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 
 import { JavascriptComponent } from './javascript/javascript.component';
 import { AngularComponent } from './angular/angular.component';
-
+import {}
 @NgModule({
   declarations: [
     AppComponent,
     JavascriptComponent,
-    AngularComponent
+    AngularComponent,
+
   ],
   imports: [
     BrowserModule,
