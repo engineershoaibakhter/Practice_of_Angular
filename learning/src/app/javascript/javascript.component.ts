@@ -12,4 +12,9 @@ showTitle(){
 const enrollService=new EnrollService();
 enrollService.alertData(this.data);
 }
+
+// showTitle(){
+//   alert("The title is javascript")
+// }
+
 }

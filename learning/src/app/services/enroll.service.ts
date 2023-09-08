@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class EnrollService {
 
-  constructor() { }
+ 
   alertData(title:string){
     alert(`The title is ${title}`);
   }
