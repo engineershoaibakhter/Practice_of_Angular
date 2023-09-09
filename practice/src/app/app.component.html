@@ -1,15 +1,7 @@
-<ul>
-    <li>
-        <a routerLink="">App</a>
-    </li>
-    <li>
-        <a routerLink="first-comp">First Component</a>
-    </li>
-    <li>
-        <a routerLink="second-comp/18">Second Component</a>
-    </li>
-</ul>
+<app-first-comp (messageEvent)="getData($event)"></app-first-comp>
 
-<h1>App Component</h1>
+<h1>{{name}}</h1>
 
-<router-outlet></router-outlet>
+<h1 appChangeColor>Shoaib Akhter</h1>
+
+

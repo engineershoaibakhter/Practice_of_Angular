@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from './data.service';
-import { interval } from 'rxjs';
-
+import { Ingredients } from './ingredients.model';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +9,8 @@ import { interval } from 'rxjs';
   providers:[DataService]
 })
 export class AppComponent{
-
- 
-
-
-  
-    
+   name:string="Shoaib";
+   getData(data:string){
+this.name=data;
+   }
 }
