@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FirstCompComponent } from './first-comp/first-comp.component';
 import { SecondCompComponent } from './second-comp/second-comp.component';
+import { ChangeColorDirective } from './change-color.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstCompComponent,
-    SecondCompComponent
+    SecondCompComponent,
+    ChangeColorDirective
   ],
   imports: [
     BrowserModule,

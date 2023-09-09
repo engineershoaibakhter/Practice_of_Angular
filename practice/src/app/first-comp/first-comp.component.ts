@@ -7,11 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./first-comp.component.css']
 })
 export class FirstCompComponent {
-outputText:any='';
-constructor(private dataService:DataService){
 
-}
-submit(){
-this.dataService.raisedData(this.outputText);
-}
 }

@@ -11,16 +11,7 @@ import { interval } from 'rxjs';
 })
 export class AppComponent{
 
-  counterObservable=interval(1000);
-  counterSub:any=0;
-  subscribe(){
-   this.counterSub=this.counterObservable.subscribe((value)=>{
-    console.log(value)
-   })
-  }
-  unsubscribe(){
-  this.counterSub.unsubscribe();
-  }
+ 
 
 
   
