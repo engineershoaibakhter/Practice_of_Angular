@@ -1,9 +1,9 @@
-import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, Renderer2 } from '@angular/core';
 
 @Directive({
-  selector: '[appChangeColor]'
+  selector: '[appBackground]'
 })
-export class ChangeColorDirective {
+export class BackgroundDirective {
 
   constructor(private element:ElementRef,private renderer:Renderer2){}
   ngOnInit(){
