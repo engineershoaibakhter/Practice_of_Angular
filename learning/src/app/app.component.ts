@@ -1,15 +1,10 @@
-import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
-  userLogin(data:FormData){
-console.log(data)
-
-  }
-  bro:string="Junain"
+  title = 'learning';
 }
