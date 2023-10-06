@@ -1,4 +1,4 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,20 +6,20 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
-  title = 'learning';
+export class AppComponent {
 
-  constructor(private activateRoute:ActivatedRoute){
-  }
+  
+  // constructor(private activateRoute:ActivatedRoute){
+  // }
 
-  ngOnInit() {
-      this.activateRoute.fragment.subscribe((value)=>{
-        console.log(value)
-        this.jumpTo(value)
-      })
-  }
+  // ngOnInit() {
+  //     this.activateRoute.fragment.subscribe((value)=>{
+  //       console.log(value)
+  //       this.jumpTo(value)
+  //     })
+  // }
 
-  jumpTo(section:any){
-    document.getElementById(section)?.scrollIntoView({behavior:'smooth'})
-  }
+  // jumpTo(section:any){
+  //   document.getElementById(section)?.scrollIntoView({behavior:'smooth'})
+  // }
 }

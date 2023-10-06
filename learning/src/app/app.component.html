@@ -1,18 +1,26 @@
-
-
-
-
 <div>
+  <ul>
+    <li><a routerLink="/" routerLinkActive="myactive" [routerLinkActiveOptions]='{exact:true}'>Home</a></li>
+    <li><a routerLink="/contact" routerLinkActive="myactive">Contact</a></li>
+    <li><a [routerLink]="['/about']" [routerLinkActive]="['myactive']">About</a></li>
+  </ul>
+</div>
+
+<router-outlet></router-outlet>
+
+
+
+<!-- <div>
   <ul>
     <li><a   routerLink="" fragment="Home">Home</a></li>
     <li><a  routerLink="" fragment="About">About</a></li>
     <li><a  routerLink="" fragment="Contact">Contact</a></li>
   </ul>
-</div>
+</div> -->
 
 <!-- <router-outlet></router-outlet> -->
 
-<app-home id="Home"></app-home>
+<!-- <app-home id="Home"></app-home>
 <app-about id="About"></app-about>
-<app-contact id="Contact"></app-contact>
+<app-contact id="Contact"></app-contact> -->
 
