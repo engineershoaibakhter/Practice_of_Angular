@@ -1,10 +1,28 @@
-<h1>Shoaib Akhter is learning {{title}}</h1>
-<h2>{{name}}</h2>
-<h2>{{getName()}}</h2>
-<h2>{{obj.firstName}}</h2>
-<h3>{{bio}}</h3>
-<h4>{{10+20}}</h4>
-<h4>{{num1+num2}}</h4>
-<app-user-list></app-user-list>
-<app-login></app-login>
-<app-register></app-register>
+<!-- First -->
+<h1 *ngIf="boolean" >
+  Shoaib
+</h1>
+
+<!-- Second -->
+
+<h1 *ngIf="show=='yes' else elseBlock" >
+  Shoaib
+</h1>
+
+<ng-template #elseBlock>
+  <h3>Akhter</h3>
+</ng-template>
+
+<!-- Third -->
+
+<h1 *ngIf="show=='yes' then ifBlock else elseBlock" >
+  Shoaib
+</h1>
+
+<ng-template #ifBlock>
+  <h3 >If Akhter</h3>
+</ng-template>
+
+<ng-template #elseBlock>
+  <h3 >Else Akhter</h3>
+</ng-template>
