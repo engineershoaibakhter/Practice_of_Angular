@@ -7,7 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  getValuesFromForm(value){
-    console.log(value)
-  }
+ color='purple';
+ error=true;
+
+ changeColor(){
+  this.error=false
+ }
 }
