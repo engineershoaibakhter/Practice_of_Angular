@@ -1,28 +1,6 @@
-<!-- First -->
-<h1 *ngIf="boolean" >
-  Shoaib
-</h1>
-
-<!-- Second -->
-
-<h1 *ngIf="show=='yes' else elseBlock" >
-  Shoaib
-</h1>
-
-<ng-template #elseBlock>
-  <h3>Akhter</h3>
-</ng-template>
-
-<!-- Third -->
-
-<h1 *ngIf="show=='yes' then ifBlock else elseBlock" >
-  Shoaib
-</h1>
-
-<ng-template #ifBlock>
-  <h3 >If Akhter</h3>
-</ng-template>
-
-<ng-template #elseBlock>
-  <h3 >Else Akhter</h3>
-</ng-template>
+<form #simpleForm="ngForm" (ngSubmit)="getValuesFromForm(simpleForm.value)">
+  <input type="text" ngModel name="username" placeholder="Enter Name"> <br> <br>
+  <input type="email" ngModel name="email" placeholder="Enter Email"> <br> <br>
+  <input type="password" ngModel name="password" placeholder="Enter Address"> <br> <br>
+  <button >Submit</button>
+</form>

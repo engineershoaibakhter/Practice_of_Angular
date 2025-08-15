@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular';
-  boolean=false;
-  show='yes'
+
+  getValuesFromForm(value){
+    console.log(value)
+  }
 }
