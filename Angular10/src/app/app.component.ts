@@ -7,10 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
- color='purple';
- error=true;
-
- changeColor(){
-  this.error=false
- }
+data={
+  name:"shoaib",
+  age:41
+}
 }
