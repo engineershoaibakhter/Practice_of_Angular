@@ -1,3 +1,6 @@
+<app-users (parentComponents)="getData($event)"></app-users>
 
-<app-users [hero]="data"></app-users>
-
+<div *ngFor="let item of user">
+  <h1>{{item.name}}</h1>
+  <h1>{{item.age}}</h1>
+</div>
