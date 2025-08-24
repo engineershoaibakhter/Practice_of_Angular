@@ -1,2 +1,7 @@
-<button (click)='loadAdmin()'>Admin Button</button>
-<button (click)="loadUser()">User Button</button>
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+
+  <input type="email" name="email" ngModel > <br> <br>
+  <input type="password" name="password" ngModel>
+  <button type="submit">Submit</button>
+
+</form>
