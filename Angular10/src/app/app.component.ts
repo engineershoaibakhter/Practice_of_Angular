@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ComponentFactoryResolver, ViewContainerRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,24 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  constructor(
+    private viewContainer:ViewContainerRef,
+    private cfr:ComponentFactoryResolver
+  ){}
+   async loadAdmin(){
+    this.viewContainer.clear()
+      const {AdminComponent}  =await import('./admin/admin.component')
+      this.viewContainer.createComponent(
+        this.cfr.resolveComponentFactory(AdminComponent)
+      )
+    }
+
+    async loadUser(){
+      this.viewContainer.clear()
+      const {UserComponent} = await import('./user/user.component')
+      this.viewContainer.createComponent(
+        this.cfr.resolveComponentFactory(UserComponent)
+      )
+    }
 
 }
